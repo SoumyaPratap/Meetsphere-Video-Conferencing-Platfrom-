@@ -1,0 +1,188 @@
+.meeting-container {
+  min-height: 100vh;
+  background: #475569;
+  color: white;
+  padding: 24px;
+  padding-bottom: 120px;
+}
+
+.meeting-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.meeting-header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.meeting-header h2,
+.meeting-header h3 {
+  margin-top: 10px;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.video-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.video-card {
+  background: #64748b;
+  padding: 18px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.video-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 18px;
+  background: black;
+}
+
+.chat-box {
+  margin-top: 30px;
+  background: #64748b;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.chat-box h3 {
+  margin-top: 0;
+}
+
+.chat-messages {
+  background: #334155;
+  border-radius: 16px;
+  padding: 15px;
+  max-height: 220px;
+  overflow-y: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.chat-message {
+  background: #475569;
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 12px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 15px;
+}
+
+.chat-input-area button {
+  border: none;
+  background: #7c3aed;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-input-area button:hover {
+  background: #6d28d9;
+}
+
+.control-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 15px;
+
+  background: rgba(51, 65, 85, 0.95);
+
+  padding: 15px 20px;
+
+  border-radius: 60px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.control-bar button {
+  border: none;
+
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  background: #64748b;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 24px;
+
+  transition: 0.3s;
+}
+
+.control-bar button:hover {
+  transform: scale(1.08);
+  background: #7c3aed;
+}
+
+.leave-btn {
+  background: #dc2626 !important;
+}
+
+.leave-btn:hover {
+  background: #b91c1c !important;
+}
+
+@media (max-width: 768px) {
+  .meeting-container {
+    padding: 16px;
+    padding-bottom: 110px;
+  }
+
+  .meeting-header h1 {
+    font-size: 28px;
+  }
+
+  .video-section {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-input-area {
+    flex-direction: column;
+  }
+
+  .control-bar {
+    gap: 10px;
+    padding: 12px 15px;
+  }
+
+  .control-bar button {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+}
